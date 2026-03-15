@@ -1463,7 +1463,10 @@ footer {
  
     <div class="contact-form reveal">
       <h3 class="form-title">Demande de devis gratuit</h3>
-      <div id="form-content">
+      <form name="devis" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="devis">
+        <input type="hidden" name="bot-field">
+<div id="form-content">
         <div class="form-row">
           <div class="form-group">
             <label class="form-label">Votre prénom</label>
@@ -1512,9 +1515,10 @@ footer {
           <label class="form-label">Message (facultatif)</label>
           <textarea class="form-textarea" placeholder="Précisez votre situation, vos besoins ou vos questions..."></textarea>
         </div>
-        <button type="button" class="form-submit" onclick="submitForm()">ENVOYER MA DEMANDE</button>
+        <button type="submit" class="form-submit">ENVOYER MA DEMANDE</button>
         <p class="form-note">Réponse sous 24h · Devis gratuit et sans engagement · Données confidentielles</p>
       </div>
+        </form>
       <div class="form-success" id="form-success">
         <div class="form-success-icon">🌿</div>
         <div class="form-success-title">Message reçu</div>
